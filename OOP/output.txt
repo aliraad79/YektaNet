@@ -1,4 +1,3 @@
-Describe each class in this method.
 This class make an ad and store it with a title and a id.
 This class implement a advertiser with an id and its name.
 name2
@@ -6,5 +5,3 @@ new name
 2
 1
 3
-Each advertiser has an id and a name.(We can change the name with setName method)
-it also have two fields named views and clicks which have the sum of times a advertiser clicked or viewed.
