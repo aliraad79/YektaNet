@@ -2,8 +2,7 @@ from BaseAdvertising import BaseAdvertising
 
 class Ad(BaseAdvertising):
     def __init__(self, id, title,img_url, link, advertiser):
-        super().__init__()
-        self.id = id
+        super().__init__(id)
         self.title = title
         self.img_url = img_url
         self.link = link
@@ -21,7 +20,7 @@ class Ad(BaseAdvertising):
     def setImgUrl(self, img_url):
         self.img_url = img_url
 
-    def getLInk(self):
+    def getLink(self):
         return self.link
 
     def setLink(self, link):
@@ -30,22 +29,15 @@ class Ad(BaseAdvertising):
     def setAdvertiser(self, advertiser):
         self.advertiser = advertiser
 
-    def getClicks(self):
-        return self.clicks
-
-    def getViews(self):
-        return self.views
-
     def incClicks(self):
-        self.clicks += 1
+        super().incClicks()
         self.advertiser.incClicks()
 
     def incViews(self):
-        self.views += 1
+        super().incViews()
         self.advertiser.incViews()
     
-    @staticmethod
-    def describeMe():
+    def describeMe(self):
         return f'This class make an ad and store it with a title and a id.'
     
 
