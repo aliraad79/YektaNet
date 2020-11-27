@@ -20,5 +20,5 @@ class BaseAdvertising(abc.ABC):
     
     @abc.abstractmethod
     def describeMe(self):
-        return 'Describe each class in this method.'
+        pass
 
