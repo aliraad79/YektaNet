@@ -1,5 +1,8 @@
-class BaseAdvertising:
-    def __init__(self):
+import abc
+
+class BaseAdvertising(abc.ABC):
+    def __init__(self,id):
+        self.id = id
         self.clicks = 0
         self.views = 0
 
@@ -11,11 +14,11 @@ class BaseAdvertising:
 
     def incClicks(self):
         self.clicks += 1
-        self.views += 1
 
     def incViews(self):
-        self.clicks += 1
         self.views += 1
-
+    
+    @abc.abstractmethod
     def describeMe(self):
         return 'Describe each class in this method.'
+
